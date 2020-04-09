@@ -15,6 +15,11 @@ html, body {
   cursor: pointer;
 }
 
+.icons i:hover {
+  font-size: 28px;
+  transition: all .2s ease-in-out;
+}
+
 .note-textarea, .note-title {
   color: #000000;
   width: 100%;
@@ -50,11 +55,16 @@ html, body {
 }
 
 .list-container .list-group,
-.list-container .list-group-item:first-child,
+.list-container .list-group:first-child .list-group-item:first-child,
 .list-container .card {
   border-top: none;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
+}
+
+.list-container .list-group:last-child .list-group-item:last-child {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .list-container i {
@@ -67,4 +77,13 @@ html, body {
   border-right: none;
   padding: 20px;
   cursor: pointer;
+}
+
+.list-group-item:hover {
+  background: #d2d0d0;
+}
+
+.list-group-item i:hover {
+  font-size: 20px;
+  transition: all .2s ease-in-out;
 }
