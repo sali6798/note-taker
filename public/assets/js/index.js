@@ -3,9 +3,22 @@ var $noteText = $(".note-textarea");
 var $saveNoteBtn = $(".save-note");
 var $newNoteBtn = $(".new-note");
 var $noteList = $(".list-container .list-group");
+var $backNotesLink = $(".back-notes");
 
 // activeNote is used to keep track of the note in the textarea
 var activeNote = {};
+
+//================== Notes display for xs decices ========================
+var xsScreenShowNote = function() {
+  $(".note-container").show("fast");
+  $(".list-container").hide();
+}
+
+var xsScreenAllNotes = function() {
+  $(".list-container").show("slow");
+  $(".note-container").hide();
+}
+//==========================================================================
 
 // A function for getting all notes from the db
 var getNotes = function() {
@@ -138,6 +151,11 @@ $newNoteBtn.on("click", handleNewNoteView);
 $noteList.on("click", ".delete-note", handleNoteDelete);
 $noteTitle.on("keyup", handleRenderSaveBtn);
 $noteText.on("keyup", handleRenderSaveBtn);
+
+// click events for display on xs devices
+$backNotesLink.on("click", xsScreenAllNotes);
+$newNoteBtn.on("click", xsScreenShowNote);
+$noteList.on("click", ".list-group-item", xsScreenShowNote);
 
 // Gets and renders the initial list of notes
 getAndRenderNotes();

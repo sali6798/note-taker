@@ -87,3 +87,22 @@ html, body {
   font-size: 20px;
   transition: all .2s ease-in-out;
 }
+
+@media screen and (max-width: 575px) {
+  .list-container {
+    display: none;
+  }
+
+  .back-notes {
+    margin-top: 20px;
+  }
+
+  .back-notes:active {
+    color: #18BC9C;
+  }
+
+  .back-notes span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
