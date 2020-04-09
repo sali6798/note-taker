@@ -19,8 +19,7 @@ app.use(express.json());
 // =============================================================
 // Data routes
 const apiRoutes = require("./routes/apiRoutes");
-app.use(apiRoutes);
-// app.use("/api", apiRoutes);
+app.use("/api", apiRoutes);
 
 // HTML routes
 const htmlRoutes = require("./routes/htmlRoutes");
