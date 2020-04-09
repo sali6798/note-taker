@@ -86,7 +86,7 @@ body {
   border-bottom: none;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .list-container {
